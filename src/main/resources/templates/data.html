@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+          crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <title>Data Table</title>
+</head>
+<body>
+<h1>Data Table</h1>
+<div class="container">
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th>line_no</th>
+        <th>pattern</th>
+        <th>req_id</th>
+        <th>qty</th>
+        <th>remarks</th>
+        <th>roll_qty</th>
+        <th>shade</th>
+        <th>shrink</th>
+        <th>status</th>
+        <th>system_id</th>
+        <th>width</th>
+        <th>yards_qty</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="itr : ${headerTables}">
+        <td th:text="${itr.lineNo}"></td>
+        <td th:text="${itr.pattern}"></td>
+        <td th:text="${itr.reqId}"></td>
+        <td th:text="${itr.qty}"></td>
+        <td th:text="${itr.remarks}"></td>
+        <td th:text="${itr.rollQty}"></td>
+        <td th:text="${itr.shade}"></td>
+        <td th:text="${itr.shrink}"></td>
+        <td th:text="${itr.status}"></td>
+        <td th:text="${itr.systemId}"></td>
+        <td th:text="${itr.width}"></td>
+        <td th:text="${itr.yardsQty}"></td>
+    </tr>
+    </tbody>
+</table>
+</div>
+<!--<ul>-->
+<!--    <li th:each="headerTables : ${headerTables}">-->
+<!--        <strong>Line Number:</strong> <span th:text="${headerTables.yardsQty}"></span><br>-->
+
+<!--    </li>-->
+<!--</ul>-->
+</body>
+</html>
